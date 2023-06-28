@@ -6,13 +6,144 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #111827;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
+html,
+#application,
+main {
+  height: 100%;
+  width: 100%;
 }
 
-a {
-  color: #f15d9f;
-  margin-left: .3em;
+body {
+  background-color: #111827;
+
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.todo-wrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+
+  padding: 24px;
+
+  background-color: #2b3553;
+
+  border-radius: 8px;
+
+  width: 100%;
+  max-width: 480px;
+}
+
+.todo-wrapper form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+}
+
+.todo-wrapper form input {
+  min-width: 0;
+  width: 100%;
+
+  font-size: 20px;
+
+  padding: 6px 12px;
+
+  border: none;
+  border-radius: 4px;
+}
+
+.todo-wrapper form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  height: 100%;
+
+  border: none;
+  border-radius: 4px;
+
+  aspect-ratio: 1/1;
+}
+
+.todo-wrapper form button svg {
+  stroke-width: 2px;
+}
+
+.todo-wrapper ul {
+  height: 390px;
+  overflow: auto;
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+}
+
+.todo-wrapper ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+
+  background-color: #111827;
+
+  border-radius: 8px;
+}
+
+.todo-wrapper ul li div {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-wrapper ul li button {
+  border: none;
+  border-radius: 4px;
+
+  height: 100%;
+  aspect-ratio: 1;
+
+  padding: 4px;
+
+  cursor: pointer;
+}
+
+.todo-wrapper ul li button:nth-of-type(1) {
+  background: #f14444;
+}
+
+.todo-wrapper ul li button:nth-of-type(2) {
+  background: #447bf1;
+}
+
+.todo-wrapper ul li button svg {
+  width: 20px;
+  height: 20px;
+
+  stroke: #f8f8f8;
+  stroke-width: 2px;
 }
